@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion - My hobby👗</title>
+    <style>
+        body {
+            /* background-color: pink; */
+            background: linear-gradient(68.6deg, rgb(255, 255, 255) 2.2%, rgb(255, 194, 203) 96.2%);
+
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin: 15px 0;
+            font-weight: bold
+        }
+
+        h1 {
+            font-family: "Cerebri Sans";
+            color: #272142;
+            font-size: 38px;
+            line-height: 48px;
+
+        }
+
+
+        h2 {
+            font-size: 20px;
+            color: #272142;
+            font-family: "PT Mono", monospace;
+            line-height: px;
+
+        }
+
+        .container {
+            max-width: 550px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 30px 50px rgba(57, 48, 90, 0.1);
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+
+        .tips-button {
+            background: #B76E79;
+            color: white;
+            display: block;
+            margin: 30px auto;
+            width: 90%;
+            border-radius: 50px;
+            border: none;
+            font-size: 24px;
+            font-family: "Cerebri Sans";
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            border: 1px solid transparent;
+        }
+
+
+        .tips-button:hover {
+            opacity: 90%;
+            background: #fff;
+            color: #B76E79;
+            border: 1px solid #B76E79;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+
+        }
+
+        .theme-button {
+            display: block;
+            margin: 0 auto;
+            font-family: "Cerebri Sans";
+            text-transform: uppercase;
+            margin-top: 5rem;
+            margin-bottom: 3rem;
+            background-color: #B76E79;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+        }
+
+        .theme-button:hover {
+            background-color: #B76E79;
+            color: white;
+            cursor: pointer;
+            filter: contrast(80%);
+        }
+
+        .fashion-intro-picture {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .fashion-intro-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+
+        p {
+            font-family: "Cerebri Sans";
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #272142;
+        }
+
+        a {
+            color: #B76E79;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #D97E8C;
+            /* color: #9E5D67; */
+            text-decoration: none;
+        }
+
+        .grid {
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            grid-gap: 15px;
+
+        }
+
+        .grid img {
+            width: 100%;
+            /* object-fit: cover; */
+            border-radius: 8px;
+            aspect-ratio: 14 / 18;
+            transition: all 150ms ease-in-out;
+        }
+
+        .grid img:hover {
+            filter: contrast(80%);
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 16px;
+            color: #272142;
+            margin-top: 20px;
+        }
+
+        .dark {
+            /* background-color: black; */
+            background: linear-gradient(68.6deg, rgb(0, 0, 0) 2.2%, rgb(50, 50, 50) 96.2%);
+        }
+
+        .dark .container {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .dark h1,
+        .dark h2 {
+            color: #d3cde0;
+        } 
+
+         .dark p {
+            color: #d3cde0;
+        } 
+
+         .dark a {
+            color: #d3cde0;
+        } 
+        .dark .theme-button {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #d3cde0;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- Remember that we remove class "dark" from body element and used in java script that when ever we clicked on dark button
+    changed the class of the body element to dark and when we clicked again it removed the class dark from body element -->
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+        <h1>Fashion</h1>
+        <h2>Because I love to look good and feel good</h2>
+
+        <a href="https://en.wikipedia.org/wiki/Fashion" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/488/original/second-image.jpg?1752503396"
+                alt="Fashion Image" class="fashion-intro-picture">
+        </a>
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/490/original/sixth-image.jpg?1752503436"
+                alt="Fashion Image">
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/492/original/fifth-image.jpg?1752503521"
+                alt="Fashion Image">
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/498/original/woman-in-summer-fashion.jpg?1752504626"
+                alt="Fashion Image">
+
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/170/503/original/twelve-image.jpg?1752504912"
+                alt="Fashion Image">
+
+        </div>
+
+        <p><em> Fashion is not just about clothes, it’s a form of expression, a language without words.
+                I love how an outfit can tell a story, reflect a mood, or boost confidence with just one look.
+                For me, fashion is a canvas where I paint with textures, colors, and styles.
+                It’s how I explore who I am, how I want to be seen, and how I connect with the world around me.
+                Whether I’m dressing up, helping others find their style, or just mixing pieces for fun,
+                fashion is my joy, my outlet, and my way of showing up boldly and beautifully every single day.</em>
+            <br>
+            <br>
+            📖
+            <a href="https://en.wikipedia.org/wiki/Fashion" target="_blank">
+                <strong>Read on wikipedia</strong></a>
+        </p>
+
+        <button class="tips-button">Join the Fashion Circle</button>
+        <p class="footer">Coded by 👩‍💻 Habeedah with HTML, CSS and JavaScript</p>
+    </div>
+
+
+
+    <script>
+        function darkTheme() {
+            let body = document.querySelector("body");
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+            // or
+            // body.classList.toggle("dark");
+
+        }
+
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", darkTheme);
+
+
+
+
+
+        function contactButton() {
+            let name = prompt("Enter your name!");
+            let email = prompt("Enter your email address!");
+
+            if (name && email) {
+               alert("Thank you for joining the Fashion Circle, " + name + "! You'll now receive regular updates with style tips, fashion gist, and trend inspiration. Stay Stylish!");
+            }
+
+
+            else{
+                alert("Thanks for stopping by! We hope to see you again soon!👋.");
+            }
+
+        }
+
+        let tipsButton = document.querySelector(".tips-button");
+        tipsButton.addEventListener("click", contactButton);
+    </script>
+
+</body>
+
+
+
+
+</html>

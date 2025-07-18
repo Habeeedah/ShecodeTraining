@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Yoghut 🥛</title>
+    <link rel="stylesheet" href="yoghut.css">
+    
+</head>
+
+<body>
+
+    <div class="container">
+    <h1> I love Yoghut</h1>
+    <h2> Especially Greek Yoghut </h2>
+    <img src="./yoghut-image.jpg" alt="Greek Yoghut">
+
+    <p>
+        Strained yogurt, Greek or Greek-style yogurt, yogurt cheese, sack yogurt, 
+        kerned yogurt or labneh is yogurt that has been strained to remove most of its whey, 
+        resulting in a thicker consistency than normal unstrained yogurt,
+         while still preserving the distinctive sour taste of yogurt
+         <br /> 
+    </p>
+
+    <a href="https://en.wikipedia.org/wiki/Strained_yogurt" 
+    target="_blank"
+     class="learn-more">
+        Learn More on wikipedia </a>
+
+    <button class="buy-button">
+     👉 Buy Greek Yoghut
+    </button>
+    <p class="footer">
+        This page was built by Abdullahi Abidat Bukola
+    </p>
+    </div>
+    <!-- "https://images.eatthismuch.com/med/254520_ldementhon_71b6a3e2-ec54-48c0-9ba3-73d8596244ae.png
+   -->
+</body>
+
+
+
+
+
+<script>
+
+    function buy (){
+       let name = prompt("What is your name?");
+       let email = prompt("What is your email?");
+       let emoji = prompt("What is your favourite emoji");
+
+
+
+
+       alert( "Thank you, " + name +
+            "! We'll be in touch by email, meanwhile have lots of Yogurt!" +
+            emoji);
+    }
+
+
+
+    let buyButton = document.querySelector(".buy-button");
+    buyButton.addEventListener("click", buy);
+    
+
+</script>
+</html>

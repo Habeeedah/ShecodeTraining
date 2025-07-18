@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<ht lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice 2</title>
+
+    <style>
+
+      /* Note; this is for css manipulation */
+      .box{
+        background-color: red;  
+        width: 400px;
+        height: 400px;
+      }
+
+      /* this is to change it to blue */
+      .blue{
+        background-color: blue;
+      }
+
+      .green{
+        background-color: green;
+      }
+
+      button{
+        background-color: blue;
+        color: white;
+        margin: 20px;
+        font-size: 30px;
+      }
+
+
+      /* Note; this is for css Gradient */
+      /* .image-gallery {
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 20px;
+        justify-content: center;
+        margin-top: 5rem;
+        */
+       
+        
+        
+      /* }
+      img{
+        width: 300px;
+        border-radius: 20px; */
+        /* width: 100%; */
+  
+      /* }
+      img:hover {
+        transform: scale(1.1);
+        transition: all 500ms ease-in-out;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      } */
+
+      /* Note; this is for css transform     */
+      /* img{
+        width: 200px;
+        margin: 200px auto;
+        display: block;
+         transition: all 1500ms ease-in-out; 
+      }
+      img:hover {
+         transform: scale(2) rotate(720deg);
+         border: 10px solid #f6f4fa;
+        
+        
+       
+      } */
+        
+    </style>
+  </head>
+
+  <body>
+      <!-- Note: this is for css manipulation -->
+       <div class="box"> Hello </div>
+       <button>Turn it blue</button>
+
+
+
+
+    <!-- <How to set Linear Gradient
+     linear-gradient(direction, from, to)
+     linear-gradient(to right, #687999, #979876) -->
+
+
+    <!-- this is for css transform -->
+     <!-- <img
+      src="https://cdn.pixabay.com/photo/2021/11/21/11/38/moon-6813812_1280.jpg"
+      alt="Image of a city">  -->
+
+
+      <!-- Note this is for css Grid -->
+      <!-- <div class="image-gallery">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/168/273/original/women_coding.jpg?1750083495"
+      alt="women coding">
+      <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/168/273/original/women_coding.jpg?1750083495"
+      alt="women coding">
+      <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/168/273/original/women_coding.jpg?1750083495"
+      alt="women coding">
+      <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/168/273/original/women_coding.jpg?1750083495"
+      alt="women coding">
+      </div> -->
+
+  </body>
+
+
+  <!-- Note: this is for css manipulation -->
+    <script>
+     function makeItBlue() {
+     let box = document.querySelector(".box");
+      box.classList.add("blue");
+      // box.classList.remove("green"); // if you want to remove the green class
+      }
+
+      // This is to add an event listener to the button 
+
+     let button = document.querySelector("button");
+     button.addEventListener("click", makeItBlue); 
+
+
+
+
+      // let box = document.querySelector(".box");
+      // box.innerHTML = "Hello World"
+
+      // This is to change it to blue correlate with the css style
+      // box.classList.add("green");
+
+    </script>
+</html>

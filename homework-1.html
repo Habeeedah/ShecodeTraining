@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home work-1 </title>
+    <link rel="stylesheet" href="homework-1.css">
+</head>
+
+<body>
+
+    <div class="weather-container">
+        <h1>
+        🌤
+        <br />
+        Currently 21&deg; in Tokyo
+    </h1>
+
+        <h2> 13&deg; / <strong> 23&deg; </strong>  </h2>
+
+        <ul>
+            <li>
+                <h3>
+                 <span>🌧</span>
+                 <strong> Tomorrow </strong> 
+                </h3>
+                 <p> 10 &deg; / 22&deg;</p>
+            </li>
+           
+
+            <li>
+                <h3>
+                <span> 🌥 </span>
+                <strong>Saturday</strong>
+                </h3>
+                <p> 15&deg; / 17&deg;  </p>
+
+            </li>
+            
+            <li>
+                <h3>
+                    <span>☀️</span>
+                    <strong> Sunday </strong>
+                </h3>
+                  <p> 25&deg; / 28&deg;</p>
+            </li>
+        </ul>
+
+        <button> change city </button>
+
+        <p>Coded by Abdullahi Abidat Bukola </p> 
+        
+    </div>
+
+</body>
+
+
+
+
+
+
+<script>
+    function cityButton (){
+         let cityLive = prompt("What city do you live in?");
+        let cityTemperature = prompt("What temperature is it?");
+        let heading = document.querySelector("h1");
+         
+         if (cityTemperature < 0) {
+         heading.innerHTML = "😆<br />Currently " + cityTemperature + "°C in " + cityLive;
+         } 
+        else {
+          heading.innerHTML = "😍<br />Currently " + cityTemperature + "°C in " + cityLive;
+        }
+        
+    }
+       
+    let changeButton = document.querySelector("button");
+    changeButton.addEventListener("click", cityButton);
+
+</script>
+
+</html>
