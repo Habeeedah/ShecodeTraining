@@ -5,52 +5,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home work-1 </title>
-    <link rel="stylesheet" href="homework-1.css">
+    <!-- <link rel="stylesheet" href="homework-1.css"> -->
+    <style>
+        body {
+            background-color: #FFFFFF;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .weather-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 34px;
+            color: #1a64d6;
+            line-height: 48px;
+            margin: 0;
+            text-align: center;
+        }
+
+
+        h2 {
+            font-size: 34px;
+            margin: 0;
+            line-height: 48px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-width: 400px;
+            width: 100%;
+
+        }
+
+
+        li {
+            list-style: none;
+            text-align: center;
+            padding: 10px 0;
+            transition: all 200ms ease-in-out;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        li:hover {
+            background-color: #fffbef;
+            border-radius: 10px;
+        }
+
+
+        h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+
+        p {
+            font-size: 20px;
+            opacity: 70%;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #1a64d6;
+            background: #1a64d6;
+            color: #fff;
+            font-size: 16px;
+            line-height: 22px;
+            padding: 18px 26px;
+            border-radius: 34px;
+            transition: all 200ms ease;
+            box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #1a64d6;
+            border: 1px solid #1a64d6;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="weather-container">
         <h1>
-        🌤
-        <br />
-        Currently 21&deg; in Tokyo
-    </h1>
+            🌤
+            <br />
+            Currently 21&deg; in Tokyo
+        </h1>
 
-        <h2> 13&deg; / <strong> 23&deg; </strong>  </h2>
+        <h2> 13&deg; / <strong> 23&deg; </strong> </h2>
 
         <ul>
             <li>
                 <h3>
-                 <span>🌧</span>
-                 <strong> Tomorrow </strong> 
+                    <span>🌧</span>
+                    <strong> Tomorrow </strong>
                 </h3>
-                 <p> 10 &deg; / 22&deg;</p>
+                <p> 10 &deg; / 22&deg;</p>
             </li>
-           
+
 
             <li>
                 <h3>
-                <span> 🌥 </span>
-                <strong>Saturday</strong>
+                    <span> 🌥 </span>
+                    <strong>Saturday</strong>
                 </h3>
-                <p> 15&deg; / 17&deg;  </p>
+                <p> 15&deg; / 17&deg; </p>
 
             </li>
-            
+
             <li>
                 <h3>
                     <span>☀️</span>
                     <strong> Sunday </strong>
                 </h3>
-                  <p> 25&deg; / 28&deg;</p>
+                <p> 25&deg; / 28&deg;</p>
             </li>
         </ul>
 
         <button> change city </button>
 
-        <p>Coded by Abdullahi Abidat Bukola </p> 
-        
+        <p>Coded by Abdullahi Abidat Bukola </p>
+
     </div>
 
 </body>
@@ -61,20 +156,20 @@
 
 
 <script>
-    function cityButton (){
-         let cityLive = prompt("What city do you live in?");
+    function cityButton() {
+        let cityLive = prompt("What city do you live in?");
         let cityTemperature = prompt("What temperature is it?");
         let heading = document.querySelector("h1");
-         
-         if (cityTemperature < 0) {
-         heading.innerHTML = "😆<br />Currently " + cityTemperature + "°C in " + cityLive;
-         } 
-        else {
-          heading.innerHTML = "😍<br />Currently " + cityTemperature + "°C in " + cityLive;
+
+        if (cityTemperature < 0) {
+            heading.innerHTML = "😆<br />Currently " + cityTemperature + "°C in " + cityLive;
         }
-        
+        else {
+            heading.innerHTML = "😍<br />Currently " + cityTemperature + "°C in " + cityLive;
+        }
+
     }
-       
+
     let changeButton = document.querySelector("button");
     changeButton.addEventListener("click", cityButton);
 

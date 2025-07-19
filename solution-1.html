@@ -5,7 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="solution-1.css">
+    <!-- <link rel="stylesheet" href="solution-1.css"> -->
+    <style>
+        h1,
+        h2,
+        h3 {
+            font-family: Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1a64d6;
+            font-size: 34px;
+            line-height: 48px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 34px;
+            line-height: 48px;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        h3 {
+            margin: 0;
+
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            text-align: center;
+            padding: 10px 0;
+            transition: all 200ms ease-in-out;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+
+        }
+
+        li:hover {
+            background-color: #fffbef;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            opacity: 70%;
+            text-align: center;
+            font-family: monospace;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #1a64d6;
+            background: #1a64d6;
+            color: #fff;
+            font-size: 16px;
+            line-height: 22px;
+            padding: 16px 24px;
+            border-radius: 30px;
+            transition: all 200ms ease;
+            box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #1a64d6;
+            border: 1px solid #1a64d6;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,21 +112,21 @@
 </body>
 
 <Script>
-     function changeCity() {
+    function changeCity() {
         let city = prompt("What city do you live in?");
         let temperature = prompt("What temperature is it?");
         let heading = document.querySelector("h1");
         if (temperature < 0) {
-          heading.innerHTML =
-            "☹️<br />Currently " + temperature + "°C in " + city;
+            heading.innerHTML =
+                "☹️<br />Currently " + temperature + "°C in " + city;
         } else {
-          heading.innerHTML =
-            "😄<br />Currently " + temperature + "°C in " + city;
+            heading.innerHTML =
+                "😄<br />Currently " + temperature + "°C in " + city;
         }
-      }
+    }
 
-      let changeButton = document.querySelector("button");
-      changeButton.addEventListener("click", changeCity);
+    let changeButton = document.querySelector("button");
+    changeButton.addEventListener("click", changeCity);
 </Script>
 
 </html>
