@@ -2,426 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Everything Affordable</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css"
         integrity="sha512-UuQ/zJlbMVAw/UU8vVBhnI4op+/tFOpQZVT+FormmIEhRSCnJWyHiBbEVgM4Uztsht41f3FzVWgLuwzUqOObKw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: "Rubik", sans-serif;
-            background-color: #f5f5f5;
-            /* overflow: hidden; */
-            position: relative;
-        }
-
-
-        .container {
-            width: 100%;
-            max-width: 120rem;
-            margin: 25px auto;
-            padding: 0 3rem;
-
-        }
-
-
-        .nav-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            position: relative;
-        }
-
-        .nav-bar img {
-            max-width: 120px;
-            height: auto;
-        }
-
-
-
-        .nav-bar a {
-            text-decoration: none;
-            color: black;
-        }
-
-        .menu-list {
-            display: flex;
-            align-items: center;
-
-        }
-
-        .menu-list ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        .menu-list ul a {
-            font-size: 18px;
-            font-weight: 400;
-            /* Fix border jump */
-
-        }
-
-        .menu-list ul a.carty {
-            border-radius: 20px;
-        }
-
-
-        /* NAV */
-        .menu-list ul a:hover,
-        .menu-list ul a.active {
-            box-shadow: 0 0 0 7px #AEC2CC;
-            background-color: #F5F5F5;
-        }
-
-
-
-        .menu-list ul li i {
-            color: red;
-        }
-
-        .hamburger {
-            display: none;
-            background: #F5F5F5;
-            margin-left: 19rem;
-            font-size: 15px;
-            position: relative;
-            padding: 5px;
-            cursor: pointer;
-            color: #282828;
-            transition: all 0.3s;
-        }
-
-        .hamburger:hover {
-            box-shadow: 0 0 0 7px #AEC2CC;
-        }
-
-
-        @media (max-width: 768px) {
-
-            .container {
-                padding: 0 1.1rem;
-                /* reduce padding for small screens */
-            }
-
-            /* note that menu-list ul on media is working when we minimize the screen on hamburger part */
-            .menu-list ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                background-color: #F5F5F5;
-                width: 100%;
-                padding: 10px 0;
-            }
-
-            /* This ends here */
-
-
-            /* This flex makes hamburger to display as flex when clicked on */
-            .menu-list ul.active {
-                display: flex;
-            }
-
-
-            /* This makes hamburger to show when minimizing */
-            .hamburger {
-                display: block;
-            }
-        }
-
-        .menu-list ul li {
-            margin-bottom: 10px;
-        }
-
-
-        /* Wrapper section */
-
-        .section-wrapper {
-            background-color: #F5F5F5;
-            padding: 25px 0;
-        }
-
-        .wrapper {
-
-            max-width: 120rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            /* The container is 120rem, should not be more than that */
-            margin: 0 auto;
-            padding: 0 3rem;
-            align-items: center;
-            gap: 9rem;
-            /* the gap is for spaces between images and text */
-        }
-
-        .wrapper-content {
-            display: block;
-
-        }
-
-        .wrapper-heading {
-            display: block;
-            font-size: 3rem;
-            line-height: 1.05;
-            color: #282828;
-            letter-spacing: -0.5px;
-            font-weight: bold;
-
-            margin-top: 0;
-            margin-bottom: 2.5rem;
-
-        }
-
-        .wrapper-heading span {
-            display: block;
-        }
-
-        .wrapper-paragraph {
-            font-size: 21px;
-            line-height: 1.6;
-            margin-bottom: 2.5rem;
-        }
-
-
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 4rem;
-
-        }
-
-
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.1rem;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.3s;
-            /* <a> to make <a> looks like a button  */
-        }
-
-
-        .btn-carty {
-            background: #2b6482;
-            color: #fff;
-            padding: 10px 40px;
-            font-weight: 600;
-            border-radius: 8px;
-
-        }
-
-        .btn-carty:hover,
-        .btn-carty.active {
-            box-shadow: 0 0 0 7px #AEC2CC;
-            /* border: 7px solid #AEC2CC; */
-            border-radius: 8px;
-            background-color: #2b6482;
-            color: #fff;
-        }
-
-        .btn-love {
-            background: #c7c7cd;
-            color: #222;
-            padding: 1rem;
-            border-radius: 50%;
-
-        }
-
-
-        /* Hover state (box shadow) */
-        .btn-love:hover {
-            background-color: #2b6482;
-            box-shadow: 0 0 0 3px #fff;
-            /* White ring */
-            color: #fff;
-        }
-
-        /* Active state (clicked) */
-        .btn-love.active {
-            background-color: #2b6482;
-            box-shadow: 0 0 0 7px #AEC2CC;
-            /* Add a border instead */
-            border-radius: 50%;
-            color: #fff;
-        }
-
-        .products-delivered {
-            display: flex;
-            align-items: center;
-            gap: 1.8rem;
-
-        }
-
-        .delivered-images {
-            display: flex;
-        }
-
-        .delivered-images img {
-            height: 3rem;
-            border-radius: 50%;
-            margin-right: -1rem;
-            /* margin right is to overlap the picture */
-            border: 3px solid #c7c7cd;
-        }
-
-        .delivered-text {
-            font-size: 18px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .delivered-text span {
-            color: #2b6482;
-            font-weight: 700;
-        }
-
-        .wrapper-laptopimage {
-            justify-self: center;
-            /* Centers the laptop image in its grid column */
-        }
-
-        .wrapper-laptopimage img {
-            width: 100%;
-            /* Reduce size to fit nicely */
-            height: auto;
-            /* Maintain the aspect ratio */
-            display: block;
-            /* Remove extra spaces (for inline images) */
-        }
-
-
-        /* This is for section-wrapper media query */
-        @media (max-width: 768px) {
-
-
-            .section-wrapper {
-                align-items: center;
-                padding: 1rem 0;
-                margin: 0;
-            }
-
-            /* collapse the 2-column grid into 1, so the laptop is no longer into 2 grid.its now 1*/
-            /* There was also unneccessary padding. i put padding o to reduce it */
-            .wrapper {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                padding: 0;
-                text-align: center;
-            }
-
-
-            .wrapper-content {
-                justify-self: center;
-            }
-
-            /* in this case the margin bottom was much, i had to use 1.6 rem to reduce it */
-            .wrapper-heading {
-                font-size: 2rem;
-                text-align: center;
-                white-space: nowrap;
-                margin-bottom: 1.7rem;
-            }
-
-            /* This is for the  <span>Mall</span> to join it back to same line */
-            .wrapper-heading span {
-                display: inline;
-            }
-
-
-            .wrapper-paragraph {
-                font-size: 1rem;
-                line-height: 1.6;
-                margin: 0 auto 2.5rem auto;
-                max-width: 50ch;
-                text-align: center;
-            }
-
-            /* buttons wrapper */
-            .btn-group {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 2rem;
-            }
-
-            .btn-carty {
-                padding: 20px 22px;
-                font-size: 1rem;
-            }
-
-            .btn-love {
-                width: 40px;
-                height: 40px;
-                justify-content: center;
-                align-items: center;
-                font-size: 1rem;
-
-            }
-
-            .products-delivered {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 2rem;
-            }
-
-            .delivered-images img {
-                margin-right:-0.8rem;
-                width: 2.5rem;
-                height: 2.5rem;
-            }
-
-            .delivered-text {
-                font-size: 0.95rem;
-                white-space: nowrap;
-            }
-
-            /* laptop image centered & not too wide */
-            .wrapper-laptopimage {
-                justify-self: center;
-            }
-
-            .wrapper-laptopimage img {
-                width: 85%;
-                margin: 0 auto;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="assignment.css">
 </head>
 
 <body>
-
-    <div class="container">
+    <div class="container" id="top">
         <div class="nav-bar">
-
             <a href="#">
                 <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/007/original/logo.jpg?1753291524"
-                    alt="Logo">
+                    alt="Logo" />
             </a>
-
 
             <div class="hamburger">
                 <i id="hamburger" class="fa-2x fas fa-bars"></i>
@@ -434,7 +36,9 @@
                     <li><a href="#">Categories</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Profile Picture</a></li>
-                    <li><a href="#" class="carty"><i class="fa-solid fa-cart-shopping cart"></i></a></li>
+                    <li>
+                        <a href="#" class="carty"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -443,13 +47,10 @@
     <section class="section-wrapper">
         <div class="wrapper">
             <div class="wrapper-content">
-                <h1 class="wrapper-heading">
-                    An Online shopping <span>mall</span>
-                </h1>
+                <h1 class="wrapper-heading">An Online shopping <span>mall</span></h1>
                 <p class="wrapper-paragraph">
-                    The e-commerce store with quality and affordable gadgets delivered to your doorsteps. Tailored to
-                    your
-                    earning power and needs.
+                    The e-commerce store with quality and affordable gadgets delivered
+                    to your doorsteps. Tailored to your earning power and needs.
                 </p>
                 <div class="btn-group">
                     <a href="#" class="btn btn-carty">
@@ -460,7 +61,6 @@
                         <i class="fa-regular fa-heart"></i>
                     </a>
                 </div>
-
 
                 <div class="products-delivered">
                     <div class="delivered-images">
@@ -490,14 +90,354 @@
         </div>
     </section>
 
+    <section class="section-product">
+        <div class="product-content">
+            <h2 class="first-heading">Trending Now</h2>
+            <h1 class="second-heading">Best Selling Products</h1>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/438/original/monitor-mac.png?1753896321"
+                        alt="mac-laptop" class="productcard-img" />
+                    <h1 class="grid-heading">A MacBook Monitor</h1>
+                    <p class="grid-p">$120.00</p>
+                    <span class="grid-s"><span>★★★★☆</span></span>
+                    <div class="pcard-btn">
+                        <a href="#top" class="product-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/439/original/earpiece-1.png?1753897787"
+                        alt="Earpiece" class="productcard-img" />
+                    <h1 class="grid-heading">Sony Earpiece</h1>
+                    <p class="grid-p">$40.00</p>
+                    <span class="grid-s">★★★★☆ </span>
+                    <div class="pcard-btn">
+                        <a href="#top" class="product-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/551/original/earpiece-2.png?1754113084"
+                        alt="Earpiece" class="productcard-img" />
+                    <h1 class="grid-heading">Sony Earpiece</h1>
+                    <p class="grid-p">$50.00</p>
+                    <span class="grid-s">★★★★☆</span>
+                    <div class="pcard-btn">
+                        <a href="#top" class="product-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/552/original/headphone-1.png?1754115860"
+                        alt="Headset" class="productcard-img">
+                    <h1 class="grid-heading">RTS Headphones</h1>
+                    <p class="grid-p">$90.00</p>
+                    <span class="grid-s">★★★★☆</span>
+                    <div class="pcard-btn">
+                        <a href="#top" class="product-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/553/original/laptop-hp.png?1754115918"
+                        alt="Laptop-Hp" class="productcard-img">
+                    <h1 class="grid-heading">HP Laptop</h1>
+                    <p class="grid-p">$200.00</p>
+                    <span class="grid-s">★★★★☆</span>
+                    <div class="pcard-btn">
+                        <a href="#top" class="product-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/554/original/oven.png?1754115956"
+                        alt="oven" class="productcard-img">
+                    <h1 class="grid-heading">Oven</h1>
+                    <p class="grid-p">$100.00</p>
+                    <span class="grid-s">★★★★☆</span>
+                    <div class="pcard-btn">
+                        <a href="#top" class="product-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/555/original/washing_machine.png?1754116003"
+                        alt="Washing-Machine" class="productcard-img">
+                    <h1 class="grid-heading">Washing Machine</h1>
+                    <p class="grid-p">$110.00</p>
+                    <span class="grid-s">★★★★☆</span>
+                    <div class="pcard-btn">
+                        <a href="#top" class="product-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/556/original/headphones-2.png?1754116036"
+                        alt="Headset" class="productcard-img">
+                    <h1 class="grid-heading">Headphone</h1>
+                    <p class="grid-p">$65.00</p>
+                    <span class="grid-s">★★★★☆</span>
+                    <div class="pcard-btn">
+                        <a href="#top" class="product-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrow-b">
+                <a href="#top" class="arrow-button">see all products →</a>
+            </div>
 
 
+        </div>
+    </section>
 
+    <section class="section-testimony">
+        <div class="testimony-content">
+            <h2 class="testimony-fheading">Testimonials</h2>
+            <h1 class="testimony-sh">Don't break the bank, we are here for you</h1>
 
+            <div class="testimony-grid">
+                <div class="testimony-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/737/original/circle-image-7.jpg?1754474674"
+                        alt="customer-image">
+                    <p class="testimony-p">
+                        I have always wanted to buy some cool gadgets and CDcare made owning these things very easy for
+                        me.
+                        <br>— Dave Bryson
+                    </p>
+                </div>
+
+                <div class="testimony-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/128/original/circle-image-2.jpg?1753471099"
+                        alt="customer-image">
+                    <p class="testimony-p">
+                        ...at first I was skeptical. Months later I decided to change my laptop and chose to use their
+                        instalment payments.
+                        It was a very good experience and the flexibility helped me handle other pressing expenses.
+                        <br>— Ben Hadley
+                    </p>
+                </div>
+
+                <div class="testimony-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/738/original/circle-image-8.jpg?1754474688"
+                        alt="customer-image">
+                    <p class="testimony-p">
+                        CDcare made life easier for me when it was time for me to get my home appliances.
+                        The convenience I got from having to pay instalmentally and I was able to use the extra to do
+                        other things.
+                        <br>— Steve Miller
+                    </p>
+                </div>
+
+                <div class="testimony-card">
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/127/original/circle-image-1.jpg?1753471066"
+                        alt="customer-image">
+                    <P class="testimony-p">
+                        I doubted CDcare at first and I had to visit their office before I made my first instalment. I
+                        believed and told many more people about CDcare when I collected my Fridge.
+                        I have made it my responsibility to tell everybody about this wonderful product
+                        <br>— Hannah Smith
+                    </P>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-pricing">
+        <div class="pricing-content">
+            <h2 class="pricing-fh">Pricing</h2>
+            <h1 class="pricing-sh">Own gadgets without breaking the bank</h1>
+
+            <div class="card-wrapper">
+                <!-- Left Card (No Ribbon) -->
+
+                <div class="border-white-wrapper">
+                    <p class="title">MAKE PAYMENTS</p>
+                    <h2 class="tie"> <span>for</span> <strong>gadgets</strong></h2>
+                    <p class="note">at once!</p>
+                </div>
+
+                <!-- Right Card (With Ribbon) -->
+                <div class="border-gray-wrapper">
+                    <div class="ribbon">POPULAR PLAN</div>
+                    <p class="title">MAKE PAYMENTS</p>
+                    <h2 class="tie"> <span>for </span> <strong>gadgets</strong></h2>
+                    <p class="note">in installments!</p>
+                </div>
+            </div>
+
+            <p class="pricing-p">Prices include all applicable taxes and delivery fee where applicable.
+                To cancel payment in installments at any time, see terms and conditions</p>
+
+            <div class="pricing-content-1">
+                <div class="content-1">
+                    <div class="pricard-btn">
+                        <span class="pricing-btn">
+                            <i class="fa-solid fa-infinity"></i>
+                        </span>
+                    </div>
+                    <h2 class="pri-head">No more fretting!</h2>
+                    <p class="pri-description">Our installment plans vary between 1 month to 12 months</p>
+                </div>
+
+                <div class="content-1">
+                    <div class="pricard-btn">
+                        <span class="pricing-btn">
+                            <i class="fa-solid fa-house feature-icon"></i>
+                        </span>
+                    </div>
+                    <h2 class="pri-head">Home Delivery</h2>
+                    <p class="pri-description">Our cooks only use local, fresh, and organic products to prepare your
+                        products.</p>
+                </div>
+
+                <diV class="content-1">
+                    <div class="pricard-btn">
+                        <span class="pricing-btn">
+                            <i class="fa-solid fa-store feature-icon"></i>
+                        </span>
+                    </div>
+                    <h2 class="pri-head">Store Pickup</h2>
+                    <p class="pri-description">All our partners only use reusable containers to package all your
+                        products.</p>
+                </diV>
+
+                <div class="content-1">
+                    <div class="pricard-btn">
+                        <span class="pricing-btn">
+                            <i class="fa-solid fa-pause feature-icon"></i>
+                        </span>
+                    </div>
+                    <h2 class="pri-head">Pause anytime</h2>
+                    <p class="pri-description">Financial issues? Just contact the customer care line</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <div class="form-wrapper">
+                    <h1 class="form-head">Get your first gadgets today!</h1>
+                    <p class="form-p">Your desired electrical gadgets at zero interest with no strain
+                        on their finances with the option of payment in installments awaits you!
+                    </p>
+
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" placeholder="Abidat Bukola">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="abidatbukola@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="referral">Where did you hear from us?</label>
+                                <select id="referral">
+                                    <option value="">Please choose an option</option>
+                                    <option value="friends">Friends and Family</option>
+                                    <option value="youtube">YouTube Video</option>
+                                    <option value="social">Social Media</option>
+                                    <option value="newsletter">Newsletter</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="friendName">If Friends and Family, what's their name?</label>
+                                <input type="text" id="friendName" placeholder=Aisha Adeyemi>
+                            </div>
+                        </div>
+                        <div class="sum-btn">
+                            <button type="submit" class="submit-btn">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+          <hr> 
+        </div>
+    </section>
+
+    <footer>
+        <div class="f-wrapper">
+            <div class="footer-grid">
+                <div class="footer-content">
+                    <a href="">
+                        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/007/original/logo.jpg?1753291524"
+                        alt="Company Logo" class="company-logo">
+                    </a>
+                    <div class="link-wrapper">
+                        <a href="">
+                            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/083/original/instagram_logo.jpg?1755032806"
+                            alt="Instagram Logo" class="social-logo">
+                        </a>
+                        <a href="">
+                            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/085/original/facebook_logo.png?1755032860"
+                            alt="Facebook Logo" class="social-logo">
+                        </a>
+                        <a href="">
+                            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/084/original/twitter_logo.png?1755032823"
+                            alt="Twitter Logo" class="social-logo">
+                        </a>
+                    </div>
+                    <p class="social-p">Copyright © 2027 by EverythingAffordable, Inc. All, rights reserved.</p>
+                </div>
+
+                <div class="footer-content">
+                    <h3 class="footer-content-h">Contact</h3>
+                    <p class="footer-pp">4200 Fifth Ave, Pittsburgh, PA <br> 
+                        15260, United States</p>
+                    <p class="footer-cont-pp">+1 412-624-4141</p>
+                   <a href="" class="footer-cont-pp">hello@everythingaffordable.com</a>
+                </div>
+
+                <div class="footer-content">
+                    <h3 class="footer-content-h">Account</h3>
+                    <a href="" class="footer-content-p"><p>Create account</p></a>
+                    <a href="" class="footer-content-p"><p>Sign in</p></a>
+                    <a href="" class="footer-content-p"><p>iOS app</p></a>
+                    <a href="" class="footer-content-p"><p>Android app</p></a>
+                </div>
+
+                <div class="footer-content">
+                    <h3 class="footer-content-h">Company</h3>
+                    <a href="" class="footer-content-p"> <p>About Everything Affordable</p></a>
+                    <a href="" class="footer-content-p"><p>For Business</p></a>
+                    <a href="" class="footer-content-p"><p>Cooking partners</p></a>
+                    <a href="" class="footer-content-p"><p>Careers</p></a>
+                </div>
+
+                <div class="footer-content">
+                    <h3 class="footer-content-h">Resources</h3>
+                    <a href="" class="footer-content-p"><p>Recipe directory</p></a>
+                    <a href=""class="footer-content-p"><p>Help center</p></a>
+                    <a href="" class="footer-content-p"><p>Privacy & terms</p></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
     <script>
-
         // This is for the hamburger icon for the minimizing the screen
         function hamburgerClick() {
             let menu = document.querySelector(".menu-list ul");
@@ -511,17 +451,7 @@
         let hamburger = document.querySelector(".hamburger");
         hamburger.addEventListener("click", hamburgerClick);
 
-        
-
         //   This is where the hamburger end
-
-
-      
-
-
-
-
-
 
         /* ===== NAV LINKS (one active at a time, clear on body click) ===== */
         function clearNavActive() {
@@ -548,8 +478,6 @@
         }
         let navList = document.querySelector(".menu-list ul");
         navList.addEventListener("click", navListClick);
-
-
 
         //  This is for the wrapper btn-carty button
         function cartClick(event) {
@@ -579,8 +507,6 @@
         cartBtn.addEventListener("click", cartClick);
         // This is where its end
 
-
-
         //  This is for the wrapper btn-love button
         function loveClick(event) {
             event.preventDefault();
@@ -606,21 +532,7 @@
 
         let loveBtn = document.querySelector(".btn-love");
         loveBtn.addEventListener("click", loveClick);
-
-
-
-
-
-
-
-
-
     </script>
-
 </body>
-
-
-
-
 
 </html>
