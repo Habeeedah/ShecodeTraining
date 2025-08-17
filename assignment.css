@@ -268,13 +268,36 @@
   }
 
   /* This is for section-wrapper media query */
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
       .section-wrapper {
           align-items: center;
           padding-left: 1.2rem;
           padding-right: 1.2rem;
           margin: 0;
-      }
+          
+      } */
+
+      @media (max-width: 768px) {
+    /* ---------------- Section Wrapper ---------------- */
+    .section-wrapper {
+        padding: 1rem 1rem 2rem 1rem; /* top, right, bottom, left */
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+         align-items: center;
+    }
+
+    /* Ensure inner sections fit well */
+    .section-wrapper > .section-product,
+    .section-wrapper > .section-testimony,
+    .section-wrapper > .section-pricing {
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
 
       /* collapse the 2-column grid into 1, so the laptop is no longer into 2 grid.its now 1*/
       /* There was also unneccessary padding. i put padding o to reduce it */
